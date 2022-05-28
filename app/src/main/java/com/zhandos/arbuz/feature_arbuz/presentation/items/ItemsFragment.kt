@@ -1,4 +1,4 @@
-package com.zhandos.arbuz.feature_arbuz.items
+package com.zhandos.arbuz.feature_arbuz.presentation.items
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.zhandos.arbuz.databinding.FragmentItemsBinding
 import com.zhandos.arbuz.feature_arbuz.domain.ArbuzCondition
 import com.zhandos.arbuz.feature_arbuz.domain.model.Arbuz
-import com.zhandos.arbuz.feature_arbuz.items.adapter.ArbuzAdapter
+import com.zhandos.arbuz.feature_arbuz.presentation.items.adapter.ArbuzAdapter
 
 class ItemsFragment: Fragment() {
     private var _binding: FragmentItemsBinding? = null

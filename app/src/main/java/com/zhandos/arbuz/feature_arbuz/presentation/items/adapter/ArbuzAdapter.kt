@@ -1,10 +1,10 @@
-package com.zhandos.arbuz.feature_arbuz.items.adapter
+package com.zhandos.arbuz.feature_arbuz.presentation.items.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.zhandos.arbuz.databinding.FragmentItemBinding
+import com.zhandos.arbuz.databinding.ItemArbuzBinding
 import com.zhandos.arbuz.feature_arbuz.domain.model.Arbuz
 
 class ArbuzAdapter : ListAdapter<Arbuz, ArbuzAdapter.ArbuzHolder>(ArbuzDIffUtil()) {
@@ -19,7 +19,7 @@ class ArbuzAdapter : ListAdapter<Arbuz, ArbuzAdapter.ArbuzHolder>(ArbuzDIffUtil(
     }
 
 
-    class ArbuzHolder(private val binding: FragmentItemBinding) :
+    class ArbuzHolder(private val binding: ItemArbuzBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(arbuz: Arbuz) {
@@ -32,8 +32,8 @@ class ArbuzAdapter : ListAdapter<Arbuz, ArbuzAdapter.ArbuzHolder>(ArbuzDIffUtil(
         companion object {
             fun inflate(parent: ViewGroup): ArbuzHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
-                val binding: FragmentItemBinding =
-                    FragmentItemBinding.inflate(layoutInflater, parent, false)
+                val binding: ItemArbuzBinding =
+                    ItemArbuzBinding.inflate(layoutInflater, parent, false)
                 return ArbuzHolder(binding)
             }
         }

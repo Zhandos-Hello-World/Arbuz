@@ -1,4 +1,4 @@
-package com.zhandos.arbuz.feature_arbuz
+package com.zhandos.arbuz.feature_arbuz.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

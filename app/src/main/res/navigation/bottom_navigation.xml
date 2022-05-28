@@ -7,13 +7,18 @@
 
     <fragment
         android:id="@+id/basketFragment"
-        android:name="com.zhandos.arbuz.feature_arbuz.basket.BasketFragment"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.basket.BasketFragment"
         android:label="BasketFragment"
         tools:layout="@layout/fragment_basket"/>
     <fragment
         android:id="@+id/itemsFragment"
-        android:name="com.zhandos.arbuz.feature_arbuz.items.ItemsFragment"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.items.ItemsFragment"
         android:label="ItemsFragment"
         tools:layout="@layout/fragment_items"/>
+    <fragment
+        android:id="@+id/detailBasketFragment"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.detailBasket.DetailBasketFragment"
+        android:label="DetailBasketFragment"
+        tools:layout="@layout/fragment_detail_basket"/>
 
 </navigation>

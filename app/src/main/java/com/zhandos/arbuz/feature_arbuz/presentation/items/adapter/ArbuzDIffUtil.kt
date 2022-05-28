@@ -1,4 +1,4 @@
-package com.zhandos.arbuz.feature_arbuz.items.adapter
+package com.zhandos.arbuz.feature_arbuz.presentation.items.adapter
 
 import androidx.recyclerview.widget.DiffUtil
 import com.zhandos.arbuz.feature_arbuz.domain.model.Arbuz
