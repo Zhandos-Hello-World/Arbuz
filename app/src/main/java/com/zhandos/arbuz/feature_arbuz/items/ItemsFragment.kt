@@ -1,4 +1,4 @@
-package com.zhandos.arbuz.items
+package com.zhandos.arbuz.feature_arbuz.items
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.zhandos.arbuz.databinding.FragmentItemsBinding
-import com.zhandos.arbuz.domain.ArbuzCondition
-import com.zhandos.arbuz.domain.model.Arbuz
-import com.zhandos.arbuz.items.adapter.ArbuzAdapter
+import com.zhandos.arbuz.feature_arbuz.domain.ArbuzCondition
+import com.zhandos.arbuz.feature_arbuz.domain.model.Arbuz
+import com.zhandos.arbuz.feature_arbuz.items.adapter.ArbuzAdapter
 
 class ItemsFragment: Fragment() {
     private var _binding: FragmentItemsBinding? = null
@@ -20,19 +20,16 @@ class ItemsFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentItemsBinding.inflate(layoutInflater, container, false)
-        var view = binding.root
+        val view = binding.root
 
-        var adapter = ArbuzAdapter()
+        val adapter = ArbuzAdapter()
 
         adapter.submitList(mutableListOf(
-            Arbuz("ripped", ArbuzCondition.RIPE, 10, 3),
-            Arbuz("ripped", ArbuzCondition.RIPE, 10, 3),
-            Arbuz("ripped", ArbuzCondition.RIPE, 10, 3),
-            Arbuz("ripped", ArbuzCondition.RIPE, 10, 3),
-            Arbuz("ripped", ArbuzCondition.RIPE, 10, 3),
-            Arbuz("ripped", ArbuzCondition.RIPE, 10, 3),
-            Arbuz("ripped", ArbuzCondition.RIPE, 10, 3),
-            Arbuz("ripped", ArbuzCondition.RIPE, 10, 3),
+            Arbuz("Chinese Arbuz", ArbuzCondition.RIPE, 4, 2, "Chinese"),
+            Arbuz("American Arbuz", ArbuzCondition.UNRIPE, 3, 2, "USA"),
+            Arbuz("Kazakhstan Arbuz", ArbuzCondition.THWARTED, 4, 0, "Kazakhstan"),
+            Arbuz("Chinese Arbuz", ArbuzCondition.RIPE, 4, 2, "Chinese"),
+            Arbuz("Chinese Arbuz", ArbuzCondition.RIPE, 4, 2, "Chinese"),
             ))
 
 

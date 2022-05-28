@@ -1,11 +1,11 @@
-package com.zhandos.arbuz.items.adapter
+package com.zhandos.arbuz.feature_arbuz.items.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.zhandos.arbuz.databinding.FragmentItemBinding
-import com.zhandos.arbuz.domain.model.Arbuz
+import com.zhandos.arbuz.feature_arbuz.domain.model.Arbuz
 
 class ArbuzAdapter : ListAdapter<Arbuz, ArbuzAdapter.ArbuzHolder>(ArbuzDIffUtil()) {
 
@@ -24,7 +24,9 @@ class ArbuzAdapter : ListAdapter<Arbuz, ArbuzAdapter.ArbuzHolder>(ArbuzDIffUtil(
 
         fun bind(arbuz: Arbuz) {
             binding.arbuz = arbuz
+
         }
+
 
 
         companion object {

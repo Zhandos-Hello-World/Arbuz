@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Arbuz">
         <activity
-            android:name=".MainActivity"
+            android:name=".feature_arbuz.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

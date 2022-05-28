@@ -1,8 +1,7 @@
-package com.zhandos.arbuz.items.adapter
+package com.zhandos.arbuz.feature_arbuz.items.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import androidx.recyclerview.widget.RecyclerView
-import com.zhandos.arbuz.domain.model.Arbuz
+import com.zhandos.arbuz.feature_arbuz.domain.model.Arbuz
 
 class ArbuzDIffUtil: DiffUtil.ItemCallback<Arbuz>() {
 
