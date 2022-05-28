@@ -3,22 +3,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main_navigation"
-    app:startDestination="@id/itemsFragment">
+    app:startDestination="@id/itemsSkeleton">
 
     <fragment
-        android:id="@+id/basketFragment"
-        android:name="com.zhandos.arbuz.feature_arbuz.presentation.basket.BasketFragment"
-        android:label="BasketFragment"
-        tools:layout="@layout/fragment_basket"/>
-    <fragment
-        android:id="@+id/itemsFragment"
-        android:name="com.zhandos.arbuz.feature_arbuz.presentation.items.ItemsFragment"
+        android:id="@+id/itemsSkeleton"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.skeleton.ItemsSkeleton"
         android:label="ItemsFragment"
-        tools:layout="@layout/fragment_items"/>
+        tools:layout="@layout/skeleton_items"/>
+
     <fragment
-        android:id="@+id/detailBasketFragment"
-        android:name="com.zhandos.arbuz.feature_arbuz.presentation.detailBasket.DetailBasketFragment"
-        android:label="DetailBasketFragment"
-        tools:layout="@layout/fragment_detail_basket"/>
+        android:id="@+id/basketSkeleton"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.skeleton.BasketSkeleton"
+        android:label="BasketFragment"
+        tools:layout="@layout/skeleton_basket"/>
 
 </navigation>

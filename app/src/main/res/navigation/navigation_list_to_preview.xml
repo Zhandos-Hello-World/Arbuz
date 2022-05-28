@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_list_to_preview"
+    app:startDestination="@id/itemsFragment">
+
+    <fragment
+        android:id="@+id/itemsFragment"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.items.ItemsFragment"
+        android:label="ItemsFragment"
+        tools:layout="@layout/fragment_items">
+        <action
+            android:id="@+id/action_itemsFragment_to_detailPreviewFragment"
+            app:destination="@id/detailPreviewFragment"
+            app:enterAnim="@anim/bottom_to_top"
+            app:popExitAnim="@anim/top_to_bottom" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailPreviewFragment"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.detailPreview.DetailPreviewFragment"
+        android:label="DetailPreviewFragment"
+        tools:layout="@layout/fragment_detail_preview"/>
+
+</navigation>

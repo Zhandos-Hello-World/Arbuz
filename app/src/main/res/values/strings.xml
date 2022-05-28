@@ -2,4 +2,5 @@
     <string name="app_name">Arbuz</string>
     <string name="welcome_to_arbuz_kz">Добро пожаловать в Арбуз</string>
     <string name="buy">Buy</string>
+    <string name="add_to_basket">Add to basket</string>
 </resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_list_to_buy"
+    app:startDestination="@id/fragment_basket">
+
+    <fragment
+        android:id="@+id/fragment_basket"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.basket.BasketFragment"
+        android:label="BasketFragment"
+        tools:layout="@layout/fragment_basket">
+        <action
+            android:id="@+id/action_basketFragment_to_detailBasketFragment"
+            app:destination="@id/fragment_detail"
+            app:enterAnim="@anim/bottom_to_top"
+            app:popExitAnim="@anim/top_to_bottom" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_detail"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.detailBasket.DetailBasketFragment"
+        android:label="DetailBasketFragment"
+        tools:layout="@layout/fragment_detail_basket"/>
+</navigation>

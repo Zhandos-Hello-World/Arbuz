@@ -1,10 +1,13 @@
 package com.zhandos.arbuz.feature_arbuz.presentation.items
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import com.zhandos.arbuz.R
 import com.zhandos.arbuz.databinding.FragmentItemsBinding
 import com.zhandos.arbuz.feature_arbuz.domain.ArbuzCondition
 import com.zhandos.arbuz.feature_arbuz.domain.model.Arbuz
@@ -35,6 +38,10 @@ class ItemsFragment: Fragment() {
 
         binding.arbuzItems.adapter = adapter
         binding.lifecycleOwner = this
+
+        binding.nextBtn.setOnClickListener {
+            Navigation.findNavController(view).navigate(R.id.action_itemsFragment_to_detailPreviewFragment)
+        }
 
 
 

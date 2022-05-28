@@ -11,13 +11,18 @@
         <entry key="app/src/main/res/layout/activity_registration.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_basket.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.15968627929687496" />
-        <entry key="app/src/main/res/layout/fragment_detail_basket.xml" value="0.2293098819221866" />
+        <entry key="app/src/main/res/layout/fragment_detail_basket.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/fragment_detail_preview.xml" value="0.23635864257812494" />
         <entry key="app/src/main/res/layout/fragment_item.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_items.xml" value="0.1271911621093751" />
+        <entry key="app/src/main/res/layout/fragment_items.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_login.xml" value="0.28177083333333336" />
+        <entry key="app/src/main/res/layout/fragment_preview.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_registration.xml" value="0.1" />
         <entry key="app/src/main/res/layout/item_arbuz.xml" value="0.31459197998046884" />
         <entry key="app/src/main/res/layout/item_basket.xml" value="0.3882095336914063" />
+        <entry key="app/src/main/res/layout/skeleton.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/skeleton_basket.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/skeleton_items.xml" value="0.1" />
         <entry key="app/src/main/res/menu/bottom_menu.xml" value="0.26771240234375004" />
         <entry key="app/src/main/res/menu/bottom_navigation.xml" value="0.1" />
       </map>
