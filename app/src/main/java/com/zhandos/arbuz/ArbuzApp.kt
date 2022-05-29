@@ -1,4 +1,7 @@
 package com.zhandos.arbuz
 
-class ArbuzApp {
-}
+import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
+
+@HiltAndroidApp
+class ArbuzApp: Application()

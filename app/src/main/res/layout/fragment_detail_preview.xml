@@ -3,6 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <data>
+        <variable
+            name="viewModel"
+            type="com.zhandos.arbuz.feature_arbuz.presentation.detailPreview.DetailViewModel"
+            />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent">
@@ -11,7 +18,7 @@
             android:id="@+id/banner"
             android:layout_width="0dp"
             android:layout_height="196dp"
-            android:src="@drawable/riped"
+            android:src="@{viewModel.arbuz.condition}"
             android:scaleType="centerCrop"
             android:adjustViewBounds="true"
             app:layout_constraintStart_toStartOf="parent"
@@ -26,7 +33,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="Arbuz"
+            android:text="@{viewModel.arbuz.name}"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="32sp"
@@ -37,7 +44,7 @@
             android:id="@+id/price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="4.50$"
+            android:text="@{String.valueOf(viewModel.arbuz.price)}"
             android:textSize="24sp"
             android:textColor="@color/black"
             app:layout_constraintEnd_toEndOf="@id/content_end"
@@ -65,7 +72,7 @@
             android:layout_height="wrap_content"
             android:layout_width="0dp"
             android:layout_marginTop="8dp"
-            android:text="Watermelon is a flowering plant species of the Cucurbitaceae family and the name of its edible fruit. A scrambling and trailing vine-like plant, it is a highly cultivated fruit worldwide, with more than 1,000 varieties"
+            android:text="@{viewModel.arbuz.description}"
             app:layout_constraintTop_toBottomOf="@id/about_item"
             app:layout_constraintStart_toStartOf="@id/content_start"
             app:layout_constraintEnd_toEndOf="@id/content_end"
@@ -98,7 +105,7 @@
             android:id="@+id/location"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="From: United States America, New York"
+            android:text="@{viewModel.arbuz.location}"
             android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/location_icon"
             app:layout_constraintTop_toTopOf="@+id/location_icon"
@@ -114,7 +121,9 @@
             android:layout_marginTop="8dp"
             app:layout_constraintEnd_toStartOf="@+id/content_end"
             app:layout_constraintStart_toStartOf="@+id/content_start"
-            app:layout_constraintTop_toBottomOf="@+id/location" />
+            app:layout_constraintTop_toBottomOf="@+id/location"
+            android:onClick="@{() -> viewModel.addToBasket()}"
+            />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/content_start"

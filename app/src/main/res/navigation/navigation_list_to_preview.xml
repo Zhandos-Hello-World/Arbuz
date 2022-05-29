@@ -22,6 +22,10 @@
         android:id="@+id/detailPreviewFragment"
         android:name="com.zhandos.arbuz.feature_arbuz.presentation.detailPreview.DetailPreviewFragment"
         android:label="DetailPreviewFragment"
-        tools:layout="@layout/fragment_detail_preview"/>
+        tools:layout="@layout/fragment_detail_preview">
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

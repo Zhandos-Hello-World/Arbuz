@@ -15,10 +15,22 @@
             app:destination="@id/fragment_detail"
             app:enterAnim="@anim/bottom_to_top"
             app:popExitAnim="@anim/top_to_bottom" />
+        <action
+            android:id="@+id/action_fragment_basket_to_buyFragment"
+            app:destination="@id/buyFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_detail"
         android:name="com.zhandos.arbuz.feature_arbuz.presentation.detailBasket.DetailBasketFragment"
         android:label="DetailBasketFragment"
-        tools:layout="@layout/fragment_detail_basket"/>
+        tools:layout="@layout/fragment_detail_basket">
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/buyFragment"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.buy.BuyFragment"
+        android:label="BuyFragment"
+        tools:layout="@layout/fragment_buy"/>
 </navigation>

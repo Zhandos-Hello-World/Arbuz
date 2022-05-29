@@ -15,10 +15,4 @@
         android:icon="@drawable/ic_baseline_shopping_basket_24"
         />
 
-    <item
-        android:id="@+id/detailMainBasketFragment"
-        app:showAsAction="ifRoom"
-        android:title="Detail"
-        android:icon="@drawable/ic_baseline_shopping_basket_24"
-        />
 </menu>

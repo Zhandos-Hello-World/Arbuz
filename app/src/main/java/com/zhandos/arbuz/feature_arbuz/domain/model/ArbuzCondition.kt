@@ -1,4 +1,4 @@
-package com.zhandos.arbuz.feature_arbuz.domain
+package com.zhandos.arbuz.feature_arbuz.domain.model
 
 import com.zhandos.arbuz.R
 

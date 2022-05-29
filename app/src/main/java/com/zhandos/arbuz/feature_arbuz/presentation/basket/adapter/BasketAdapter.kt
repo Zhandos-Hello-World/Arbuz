@@ -8,7 +8,7 @@ import com.zhandos.arbuz.databinding.ItemBasketBinding
 import com.zhandos.arbuz.feature_arbuz.domain.model.Arbuz
 import com.zhandos.arbuz.feature_arbuz.presentation.items.adapter.ArbuzDIffUtil
 
-class BasketAdapter : ListAdapter<Arbuz, BasketAdapter.BasketArbuzHolder>(ArbuzDIffUtil()) {
+class BasketAdapter(private val listenerClick: (String) -> Unit, private val listenerDelete: (String) -> Unit) : ListAdapter<Arbuz, BasketAdapter.BasketArbuzHolder>(ArbuzDIffUtil()) {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BasketArbuzHolder {
@@ -16,15 +16,22 @@ class BasketAdapter : ListAdapter<Arbuz, BasketAdapter.BasketArbuzHolder>(ArbuzD
     }
 
     override fun onBindViewHolder(holder: BasketArbuzHolder, position: Int) {
-        holder.bind(getItem(position))
+        holder.bind(getItem(position), listenerClick, listenerDelete)
     }
 
 
     class BasketArbuzHolder(private val binding: ItemBasketBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(arbuz: Arbuz) {
+        fun bind(arbuz: Arbuz, listenerClick: (String) -> Unit, listenerDelete: (String) -> Unit) {
             binding.arbuz = arbuz
+
+            binding.root.setOnClickListener {
+                listenerClick(arbuz.name)
+            }
+            binding.delete.setOnClickListener {
+                listenerDelete(arbuz.name)
+            }
 
         }
 

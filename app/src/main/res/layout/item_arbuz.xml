@@ -49,7 +49,7 @@
 
             <!-- Buttons -->
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/filledButton"
+                android:id="@+id/add_to_basket_btn"
                 style="@style/Widget.Material3.Button.Icon"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
