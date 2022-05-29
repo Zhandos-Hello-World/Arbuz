@@ -13,98 +13,106 @@
             android:id="@+id/your_order"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toTopOf="parent"
             android:text="@string/your_order"
             android:textColor="@color/black"
-            app:layout_constraintHorizontal_bias="0"
             android:textSize="22sp"
-            />
+            android:textStyle="bold"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/items"
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:orientation="horizontal"
 
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/your_order"
-            app:spanCount="1"
+            app:spanCount="1" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/cut"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Cut"
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/items"
             />
+
         <TextView
             android:id="@+id/amount_to_pay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/amount_to_pay"
             android:layout_marginTop="16dp"
+            android:text="@string/amount_to_pay"
             app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@id/items"
-            />
+            app:layout_constraintTop_toBottomOf="@id/cut" />
+
         <TextView
             android:id="@+id/amount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$143.23"
             android:layout_marginTop="16dp"
+            android:text="$143.23"
 
-            app:layout_constraintStart_toEndOf="@id/amount_to_pay"
-            app:layout_constraintTop_toBottomOf="@id/items"
             app:layout_constraintEnd_toEndOf="@+id/content_end"
             app:layout_constraintHorizontal_bias="1"
-            />
+            app:layout_constraintStart_toEndOf="@id/amount_to_pay"
+            app:layout_constraintTop_toBottomOf="@id/cut" />
 
         <TextView
             android:id="@+id/delivery_fee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/delivery_fee"
             android:layout_marginTop="8dp"
+            android:text="@string/delivery_fee"
             app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@id/amount_to_pay"
-            />
+            app:layout_constraintTop_toBottomOf="@id/amount_to_pay" />
+
         <TextView
             android:id="@+id/fee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$1.23"
             android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="@id/amount_to_pay"
-            app:layout_constraintTop_toBottomOf="@id/amount"
+            android:text="$1.23"
             app:layout_constraintEnd_toEndOf="@+id/content_end"
             app:layout_constraintHorizontal_bias="1"
-            />
+            app:layout_constraintStart_toEndOf="@id/amount_to_pay"
+            app:layout_constraintTop_toBottomOf="@id/amount" />
+
         <TextView
             android:id="@+id/totalAmount"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/total"
             android:layout_marginTop="8dp"
+            android:text="@string/total"
             app:layout_constraintStart_toStartOf="@id/content_start"
-            app:layout_constraintTop_toBottomOf="@id/delivery_fee"
-            />
+            app:layout_constraintTop_toBottomOf="@id/delivery_fee" />
+
         <TextView
             android:id="@+id/total"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="$146.46"
             android:layout_marginTop="8dp"
-            app:layout_constraintStart_toEndOf="@id/amount_to_pay"
-            app:layout_constraintTop_toBottomOf="@id/fee"
+            android:text="$146.46"
             app:layout_constraintEnd_toEndOf="@+id/content_end"
             app:layout_constraintHorizontal_bias="1"
-            />
+            app:layout_constraintStart_toEndOf="@id/amount_to_pay"
+            app:layout_constraintTop_toBottomOf="@id/fee" />
+
         <com.google.android.material.divider.MaterialDivider
             android:id="@+id/divider"
-            android:layout_height="wrap_content"
             android:layout_width="0dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/total"
-            app:layout_constraintBottom_toTopOf="@id/name_input"
+            android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            />
+            app:layout_constraintBottom_toTopOf="@id/name_input"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/total" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/name_input"
@@ -112,6 +120,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:hint="@string/name"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
             app:layout_constraintEnd_toEndOf="@+id/content_end"
             app:layout_constraintStart_toStartOf="@+id/content_start"
             app:layout_constraintTop_toBottomOf="@id/divider">
@@ -126,40 +138,393 @@
             android:id="@+id/pay_card"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="@id/content_start"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/primary"
+            app:cardCornerRadius="8dp"
             app:layout_constraintEnd_toEndOf="@+id/content_end"
-            app:layout_constraintTop_toBottomOf="@id/name_input"
-            android:layout_marginTop="8dp">
-            <LinearLayout
-                android:orientation="horizontal"
-                android:layout_height="wrap_content"
-                android:layout_width="match_parent">
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/name_input">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
                 <ImageView
-                    android:layout_height="50dp"
+                    android:id="@+id/master_card_image"
                     android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="8dp"
                     android:src="@drawable/master_card"
-                    />
 
-            </LinearLayout>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/master_card_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Mastercard/Visa"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/master_card_image"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/master_card_subtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="1240 5231 **** ****"
+                    android:textColor="@color/white"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/master_card_image"
+                    app:layout_constraintTop_toBottomOf="@id/master_card_title" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </androidx.cardview.widget.CardView>
 
+
+        <TextView
+            android:id="@+id/delivery_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/delivery_date"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/pay_card" />
+
+        <HorizontalScrollView
+            android:id="@+id/delivery_date_group"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintEnd_toEndOf="@id/content_end"
+            app:layout_constraintTop_toBottomOf="@id/delivery_date_title"
+            android:scrollbars="none">
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/delivery_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/delivery_time"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/delivery_date_group" />
+
+        <HorizontalScrollView
+            android:id="@+id/delivery_time_group"
+            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintEnd_toEndOf="@id/content_end"
+            app:layout_constraintTop_toBottomOf="@id/delivery_time"
+            android:scrollbars="none">
+            <com.google.android.material.button.MaterialButtonToggleGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:selectionRequired="true"
+                app:singleSelection="true"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="9:00-11:00"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00-12:00"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:00-13:00"
+
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00-14:00"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="13:00-15:00"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="14:00-16:00"
+
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="15:00-17:00"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16:00-18:00"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17:00-19:00"
+
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="18:00-20:00"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="19:00-21:00"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="20:00-22:00"
+
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    />
+
+            </com.google.android.material.button.MaterialButtonToggleGroup>
+
+        </HorizontalScrollView>
+
+        <TextView
+            android:id="@+id/delivery_location_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/delivery_address"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/delivery_time_group"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/city_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/city"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/delivery_location_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/street_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/street_and_number_of_home"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/city_input">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/home_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/home_number"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constraintEnd_toStartOf="@+id/number_home"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/street_input">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/number_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/home_number"
+            android:layout_marginStart="4dp"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/content_end"
+            app:layout_constraintStart_toEndOf="@id/home_input"
+            app:layout_constraintTop_toBottomOf="@id/street_input">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/delivery_phone_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/phone"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/number_home"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/phone_number"
+            app:boxCornerRadiusBottomEnd="8dp"
+            app:boxCornerRadiusBottomStart="8dp"
+            app:boxCornerRadiusTopEnd="8dp"
+            app:boxCornerRadiusTopStart="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/content_end"
+            app:layout_constraintStart_toStartOf="@+id/content_start"
+            app:layout_constraintTop_toBottomOf="@id/delivery_phone_title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm_the_order"
+            app:layout_constraintStart_toStartOf="@id/content_start"
+            app:layout_constraintEnd_toEndOf="@id/content_end"
+            app:layout_constraintTop_toBottomOf="@id/phone_input"
+            />
+
+
+
+
+
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/content_start"
-            android:layout_height="0dp"
             android:layout_width="0dp"
-            app:layout_constraintGuide_begin="16dp"
+            android:layout_height="0dp"
             android:orientation="vertical"
-            />
+            app:layout_constraintGuide_begin="16dp" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/content_end"
-            android:layout_height="0dp"
             android:layout_width="0dp"
-            app:layout_constraintGuide_end="16dp"
+            android:layout_height="0dp"
             android:orientation="vertical"
-            />
+            app:layout_constraintGuide_end="16dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

@@ -7,10 +7,10 @@
         <entry key="app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable/ic_baseline_shopping_basket_24.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.18976440429687502" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14795379638671877" />
         <entry key="app/src/main/res/layout/activity_registration.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_basket.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_buy.xml" value="0.30693817138671875" />
+        <entry key="app/src/main/res/layout/fragment_buy.xml" value="0.2584808349609375" />
         <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.15968627929687496" />
         <entry key="app/src/main/res/layout/fragment_detail_basket.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_detail_preview.xml" value="0.23635864257812494" />

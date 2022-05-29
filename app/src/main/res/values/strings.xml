@@ -9,4 +9,13 @@
     <string name="total">Total</string>
     <string name="delivery_fee">Delivery fee</string>
     <string name="name">Name</string>
+    <string name="delivery_date">Delivery date</string>
+    <string name="confirm_the_order">Confirm the order</string>
+    <string name="delivery_time">Delivery time</string>
+    <string name="delivery_address">Delivery address</string>
+    <string name="city">City</string>
+    <string name="street_and_number_of_home">Street and number of home</string>
+    <string name="home_number">Home number</string>
+    <string name="phone">Phone</string>
+    <string name="phone_number">Phone number</string>
 </resources>

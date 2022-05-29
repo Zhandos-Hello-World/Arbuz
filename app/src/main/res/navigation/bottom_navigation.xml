@@ -17,4 +17,11 @@
         android:label="BasketFragment"
         tools:layout="@layout/skeleton_basket"/>
 
+    <fragment
+        android:id="@+id/detailMainBasketFragment"
+        android:name="com.zhandos.arbuz.feature_arbuz.presentation.buy.BuyFragment"
+        android:label="detailMainBasketFragment"
+        tools:layout="@layout/fragment_buy"
+        />
+
 </navigation>
